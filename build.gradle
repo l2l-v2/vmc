@@ -42,6 +42,7 @@ dependencyManagement {
   imports {
     mavenBom 'io.github.jhipster:jhipster-dependencies:' + jhipster_dependencies_version
     //jhipster-needle-gradle-dependency-management - JHipster will add additional dependencies management here
+    mavenBom 'org.activiti.cloud.connector:activiti-cloud-connectors-dependencies:' + activiti_cloud_connector_dependencies_version
   }
 }
 
@@ -161,6 +162,13 @@ repositories {
     mavenLocal()
     mavenCentral()
     jcenter()
+    maven {
+        url "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
+    // Activiti Repository
+    maven {
+        url "https://maven.alfresco.com/nexus/content/repositories/activiti/"
+    }
     //jhipster-needle-gradle-repositories - JHipster will add additional repositories
 }
 
@@ -252,6 +260,14 @@ dependencies {
     testCompile "com.h2database:h2"
     liquibaseRuntime "com.h2database:h2"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
+
+    // Minimum set of the activiti cloud connectors dependencies
+    compile "org.activiti.api:activiti-api-process-model"
+    compile "org.activiti.cloud.api:activiti-cloud-api-process-model"
+    compile "org.activiti.cloud.api:activiti-cloud-api-process-model-impl"
+    compile "org.activiti:activiti-api-process-model-impl"
+    compile "org.springframework.cloud:spring-cloud-starter-stream-rabbit"
+
 }
 
 task cleanResources(type: Delete) {

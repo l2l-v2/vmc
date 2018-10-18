@@ -83,7 +83,7 @@ spring:
                 enabled: true
 
 server:
-    port: 8082
+    port: 8085
 
 # ===================================================================
 # JHipster specific properties
@@ -121,7 +121,7 @@ jhipster:
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: VesselManagerCoordinator@localhost
-        base-url: http://127.0.0.1:8082
+        base-url: http://127.0.0.1:8085
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
             enabled: true

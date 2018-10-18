@@ -3,6 +3,7 @@ package com.l2l.coordinator.vmc;
 import com.l2l.coordinator.vmc.config.ApplicationProperties;
 import com.l2l.coordinator.vmc.config.DefaultProfileUtil;
 
+import com.l2l.coordinator.vmc.connectors.starter.configuration.EnableActivitiCloudConnector;
 import io.github.jhipster.config.JHipsterConstants;
 
 import org.apache.commons.lang3.StringUtils;
@@ -14,6 +15,7 @@ import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.core.env.Environment;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.annotation.PostConstruct;
 import java.net.InetAddress;
@@ -24,6 +26,8 @@ import java.util.Collection;
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 @EnableDiscoveryClient
+@EnableActivitiCloudConnector
+@EnableScheduling // @bqzhu +
 public class VesselManagerCoordinatorApp {
 
     private static final Logger log = LoggerFactory.getLogger(VesselManagerCoordinatorApp.class);
