@@ -43,6 +43,7 @@ dependencyManagement {
     mavenBom 'io.github.jhipster:jhipster-dependencies:' + jhipster_dependencies_version
     //jhipster-needle-gradle-dependency-management - JHipster will add additional dependencies management here
     mavenBom 'org.activiti.cloud.connector:activiti-cloud-connectors-dependencies:' + activiti_cloud_connector_dependencies_version
+    mavenBom 'org.camunda.bpm.dmn:camunda-engine-dmn-bom:'+camunda_dmn_dependencies_version
   }
 }
 
@@ -267,6 +268,9 @@ dependencies {
     compile "org.activiti.cloud.api:activiti-cloud-api-process-model-impl"
     compile "org.activiti:activiti-api-process-model-impl"
     compile "org.springframework.cloud:spring-cloud-starter-stream-rabbit"
+
+    // Camunda DMN
+    compile "org.camunda.bpm.dmn:camunda-engine-dmn"
 
 }
 
