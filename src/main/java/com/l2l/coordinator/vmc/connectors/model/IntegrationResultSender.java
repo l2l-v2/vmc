@@ -1,4 +1,4 @@
-package com.l2l.coordinator.vmc.connectors.starter.channels;
+package com.l2l.coordinator.vmc.connectors.model;
 
 
 import org.activiti.cloud.api.process.model.IntegrationResult;

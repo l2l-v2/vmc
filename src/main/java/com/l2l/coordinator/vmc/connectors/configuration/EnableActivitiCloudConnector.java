@@ -1,4 +1,4 @@
-package com.l2l.coordinator.vmc.connectors.starter.configuration;
+package com.l2l.coordinator.vmc.connectors.configuration;
 
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

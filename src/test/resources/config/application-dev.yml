@@ -12,7 +12,7 @@
 # Full reference is available at:
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
-ACT_INT_RES_CONSUMER: integrationResultsConsumer
+
 logging:
     level:
         ROOT: DEBUG
@@ -81,22 +81,6 @@ spring:
         locator:
             discovery:
                 enabled: true
-    cloud:
-      stream:
-        bindings:
-            annotationConsumer:
-                destination: annotationConsumer
-                contenType: application/json
-                group: integration
-            annotationProducer:
-                destination: ${ACT_INT_RES_CONSUMER}
-                contenType: application/json
-                group: integration
-    rabbitmq: # also we can add configuration here to bound with message broker.
-        host: ${ACT_RABBITMQ_HOST:localhost}
-        port: 5672
-        username: guest
-        password: guest
 
 server:
     port: 8085

@@ -3,7 +3,7 @@ package com.l2l.coordinator.vmc;
 import com.l2l.coordinator.vmc.config.ApplicationProperties;
 import com.l2l.coordinator.vmc.config.DefaultProfileUtil;
 
-import com.l2l.coordinator.vmc.connectors.starter.configuration.EnableActivitiCloudConnector;
+import com.l2l.coordinator.vmc.connectors.configuration.EnableActivitiCloudConnector;
 import io.github.jhipster.config.JHipsterConstants;
 
 import org.apache.commons.lang3.StringUtils;

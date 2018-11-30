@@ -1,4 +1,4 @@
-package com.l2l.coordinator.vmc.connectors.starter.channels;
+package com.l2l.coordinator.vmc.connectors.channels;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;

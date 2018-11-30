@@ -1,6 +1,6 @@
-package com.l2l.coordinator.vmc.connectors.starter.model;
+package com.l2l.coordinator.vmc.connectors.model;
 
-import com.l2l.coordinator.vmc.connectors.starter.configuration.ConnectorProperties;
+import com.l2l.coordinator.vmc.connectors.configuration.ConnectorProperties;
 import org.activiti.cloud.api.process.model.IntegrationRequest;
 import org.activiti.cloud.api.process.model.IntegrationResult;
 import org.activiti.cloud.api.process.model.impl.IntegrationResultImpl;
