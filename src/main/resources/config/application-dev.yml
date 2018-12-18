@@ -12,7 +12,7 @@
 # Full reference is available at:
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
-ACT_INT_RES_CONSUMER: integrationResultsConsumer
+ACT_INT_RES_CONSUMER: AnnotationIntegrationResultsConsumer
 logging:
     level:
         ROOT: DEBUG

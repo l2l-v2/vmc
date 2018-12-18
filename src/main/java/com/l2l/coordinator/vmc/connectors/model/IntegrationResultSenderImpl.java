@@ -1,5 +1,6 @@
 package com.l2l.coordinator.vmc.connectors.model;
 
+import com.l2l.coordinator.vmc.connectors.annotatoionDomain.AnnotationIntegrationResultImpl;
 import org.activiti.cloud.api.process.model.IntegrationResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,7 +19,7 @@ public class IntegrationResultSenderImpl implements IntegrationResultSender {
     }
     @Override
     public void send(Message<IntegrationResult> message) {
-        String destination = this.resultDestinationOverride != null && !this.resultDestinationOverride.isEmpty() ? this.resultDestinationOverride : "integrationResult:" + ((IntegrationResult)message.getPayload()).getIntegrationRequest().getServiceFullName();
+        String destination = this.resultDestinationOverride != null && !this.resultDestinationOverride.isEmpty() ? this.resultDestinationOverride : "integrationResult:" + ((AnnotationIntegrationResultImpl)message.getPayload()).getIntegrationRequest().getServiceFullName();
         this.resolver.resolveDestination(destination).send(message);
     }
 }
