@@ -1,6 +1,6 @@
 package com.l2l.coordinator.vmc.connectors.configuration;
 
-import org.activiti.cloud.api.process.model.impl.conf.CloudProcessModelAutoConfiguration;
+import org.conf.activiti.runtime.CloudProcessModelAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 

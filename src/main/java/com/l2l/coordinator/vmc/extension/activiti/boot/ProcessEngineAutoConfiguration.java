@@ -1,15 +1,15 @@
 package com.l2l.coordinator.vmc.extension.activiti.boot;
 
 
-import com.l2l.enterprise.vessel.extension.activiti.annotation.AnnotationService;
-import com.l2l.enterprise.vessel.extension.activiti.annotation.AnnotationServiceImpl;
-import com.l2l.enterprise.vessel.extension.activiti.behavior.L2LActivityBehaviorFactory;
-import com.l2l.enterprise.vessel.extension.activiti.form.FormService;
-import com.l2l.enterprise.vessel.extension.activiti.form.FormServiceImpl;
-import com.l2l.enterprise.vessel.extension.activiti.parser.L2LProcessParseHandler;
-import com.l2l.enterprise.vessel.extension.activiti.parser.L2LServiceTaskParseHandler;
-import com.l2l.enterprise.vessel.extension.activiti.parser.L2LServiceTaskXMLConverter;
-import com.l2l.enterprise.vessel.extension.activiti.parser.L2LTimerDefinitionParseHandler;
+import com.l2l.coordinator.vmc.extension.activiti.annotation.AnnotationService;
+import com.l2l.coordinator.vmc.extension.activiti.annotation.AnnotationServiceImpl;
+import com.l2l.coordinator.vmc.extension.activiti.behavior.L2LActivityBehaviorFactory;
+import com.l2l.coordinator.vmc.extension.activiti.form.FormService;
+import com.l2l.coordinator.vmc.extension.activiti.form.FormServiceImpl;
+import com.l2l.coordinator.vmc.extension.activiti.parser.L2LProcessParseHandler;
+import com.l2l.coordinator.vmc.extension.activiti.parser.L2LServiceTaskParseHandler;
+import com.l2l.coordinator.vmc.extension.activiti.parser.L2LServiceTaskXMLConverter;
+import com.l2l.coordinator.vmc.extension.activiti.parser.L2LTimerDefinitionParseHandler;
 import org.activiti.bpmn.converter.BpmnXMLConverter;
 import org.activiti.engine.impl.ServiceImpl;
 import org.activiti.engine.parse.BpmnParseHandler;

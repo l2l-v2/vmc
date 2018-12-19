@@ -6,6 +6,8 @@ import com.l2l.coordinator.vmc.config.DefaultProfileUtil;
 import com.l2l.coordinator.vmc.connectors.configuration.EnableActivitiCloudConnector;
 import io.github.jhipster.config.JHipsterConstants;
 
+import org.activiti.cloud.services.events.ProcessEngineChannels;
+import org.activiti.spring.boot.EndpointAutoConfiguration;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -23,11 +26,12 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Collection;
 
-@SpringBootApplication
+@SpringBootApplication(
+    exclude = {EndpointAutoConfiguration.class}
+)
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 @EnableDiscoveryClient
-@EnableActivitiCloudConnector
-@EnableScheduling // @bqzhu +
+@EnableBinding({ProcessEngineChannels.class})
 public class VesselManagerCoordinatorApp {
 
     private static final Logger log = LoggerFactory.getLogger(VesselManagerCoordinatorApp.class);

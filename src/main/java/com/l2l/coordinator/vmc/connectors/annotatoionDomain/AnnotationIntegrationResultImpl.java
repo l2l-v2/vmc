@@ -1,9 +1,10 @@
 package com.l2l.coordinator.vmc.connectors.annotatoionDomain;
 
-import org.activiti.api.process.model.IntegrationContext;
-import org.activiti.cloud.api.model.shared.impl.CloudRuntimeEntityImpl;
-import org.activiti.cloud.api.process.model.IntegrationRequest;
-import org.activiti.cloud.api.process.model.IntegrationResult;
+
+import org.activiti.runtime.api.model.IntegrationContext;
+import org.activiti.runtime.api.model.IntegrationRequest;
+import org.activiti.runtime.api.model.IntegrationResult;
+import org.activiti.runtime.api.model.impl.CloudRuntimeEntityImpl;
 
 public class AnnotationIntegrationResultImpl extends CloudRuntimeEntityImpl implements IntegrationResult {
     private AnnotationIntegrationRequestImpl annotationIntegrationRequest;

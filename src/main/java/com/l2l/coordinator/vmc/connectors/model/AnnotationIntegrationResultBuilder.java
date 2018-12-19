@@ -3,9 +3,7 @@ package com.l2l.coordinator.vmc.connectors.model;
 import com.l2l.coordinator.vmc.connectors.annotatoionDomain.AnnotationIntegrationRequestImpl;
 import com.l2l.coordinator.vmc.connectors.annotatoionDomain.AnnotationIntegrationResultImpl;
 import com.l2l.coordinator.vmc.connectors.configuration.ConnectorProperties;
-import org.activiti.cloud.api.process.model.IntegrationRequest;
-import org.activiti.cloud.api.process.model.IntegrationResult;
-import org.activiti.cloud.api.process.model.impl.IntegrationResultImpl;
+import org.activiti.runtime.api.model.IntegrationResult;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 

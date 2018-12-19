@@ -265,10 +265,10 @@ dependencies {
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
 
     // Minimum set of the activiti cloud connectors dependencies
-    compile "org.activiti.api:activiti-api-process-model"
-    compile "org.activiti.cloud.api:activiti-cloud-api-process-model"
-    compile "org.activiti.cloud.api:activiti-cloud-api-process-model-impl"
-    compile "org.activiti:activiti-api-process-model-impl"
+//    compile "org.activiti.api:activiti-api-processes-model"
+//    compile "org.activiti.cloud.api:activiti-cloud-api-processes-model"
+//    compile "org.activiti.cloud.api:activiti-cloud-api-processes-model-impl"
+//    compile "org.activiti:activiti-api-processes-model-impl"
 
     compile "org.activiti.cloud:activiti-cloud-services-api"
 //    compile "org.activiti:activiti-engine"

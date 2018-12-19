@@ -59,7 +59,7 @@ public class AbstractProcessEngineConfiguration {
                     do {
                         if (!var6.hasNext()) {
                             if (result.isEmpty()) {
-                                logger.info(String.format("No process definitions were found for autodeployment"));
+                                logger.info(String.format("No processes definitions were found for autodeployment"));
                             }
 
                             return result;

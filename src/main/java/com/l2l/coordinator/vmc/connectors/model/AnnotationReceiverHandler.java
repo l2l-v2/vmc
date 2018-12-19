@@ -4,12 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.l2l.coordinator.vmc.connectors.annotatoionDomain.AnnotationIntegrationRequestImpl;
 import com.l2l.coordinator.vmc.connectors.channels.AnnotationMessageChannels;
 import com.l2l.coordinator.vmc.connectors.configuration.ConnectorProperties;
-import org.activiti.cloud.api.process.model.IntegrationResult;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
-import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

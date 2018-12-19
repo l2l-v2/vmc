@@ -1,7 +1,7 @@
 package com.l2l.coordinator.vmc.connectors.model;
 
 import com.l2l.coordinator.vmc.connectors.annotatoionDomain.AnnotationIntegrationResultImpl;
-import org.activiti.cloud.api.process.model.IntegrationResult;
+import org.activiti.runtime.api.model.IntegrationResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.stream.binding.BinderAwareChannelResolver;

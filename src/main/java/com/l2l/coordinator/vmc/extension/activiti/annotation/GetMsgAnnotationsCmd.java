@@ -22,7 +22,7 @@ public class GetMsgAnnotationsCmd implements Command<List<Annotation>>, Serializ
 
         }else{
             Process process = ProcessDefinitionUtil.getProcess(this.processDefinitionId);
-//            List<ServiceTask> serviceTasks = process.findFlowElementsOfType(Process.class);
+//            List<ServiceTask> serviceTasks = processes.findFlowElementsOfType(Process.class);
             return  null;
         }
     }

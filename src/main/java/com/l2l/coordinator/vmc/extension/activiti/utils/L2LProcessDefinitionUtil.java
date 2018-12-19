@@ -73,7 +73,7 @@ public class L2LProcessDefinitionUtil {
             deploymentManager.deploy(deployment, (Map)null);
             ProcessDefinitionCacheEntry cachedProcessDefinition = (ProcessDefinitionCacheEntry) deploymentManager.getProcessDefinitionCache().get(processDefinitionId);
             if (cachedProcessDefinition == null) {
-                throw new ActivitiException("deployment '" + deployment.getId() + "' didn't put process definition '" + processDefinitionId + "' in the cache");
+                throw new ActivitiException("deployment '" + deployment.getId() + "' didn't put processes definition '" + processDefinitionId + "' in the cache");
             }
             return cachedProcessDefinition.getProcess();
         }

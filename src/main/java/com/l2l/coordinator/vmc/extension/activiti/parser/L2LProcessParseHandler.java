@@ -15,7 +15,7 @@ public class L2LProcessParseHandler extends ProcessParseHandler {
 
     protected void executeParse(BpmnParse bpmnParse, Process process) {
         if (!process.isExecutable()) {
-            LOGGER.info("Ignoring non-executable process with id='" + process.getId() + "'. Set the attribute isExecutable=\"true\" to deploy this process.");
+            LOGGER.info("Ignoring non-executable processes with id='" + process.getId() + "'. Set the attribute isExecutable=\"true\" to deploy this processes.");
         } else {
             bpmnParse.getProcessDefinitions().add(this.transformProcess(bpmnParse, process));
         }
