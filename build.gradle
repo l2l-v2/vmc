@@ -270,6 +270,7 @@ dependencies {
 //    compile "org.activiti.cloud.api:activiti-cloud-api-processes-model-impl"
 //    compile "org.activiti:activiti-api-processes-model-impl"
 
+    // Minimum set of the activiti cloud rb dependencies
     compile "org.activiti.cloud:activiti-cloud-services-api"
 //    compile "org.activiti:activiti-engine"
     compile "org.activiti:activiti-spring-boot-starter"
@@ -277,8 +278,13 @@ dependencies {
     compile "org.activiti.cloud:activiti-cloud-services-rest-impl"
     compile "org.activiti.cloud:activiti-cloud-services-connectors"
     compile "org.activiti.cloud:activiti-cloud-services-subscriptions"
-
-
+    // extension of rb
+    compile "org.activiti.l2l:l2l-activiti-runtime-bundle-service:7.0.0.Beta1"
+    //websocket
+    compile "org.springframework.boot:spring-boot-starter-websocket"
+    compile "org.springframework.security:spring-security-messaging"
+//    compile "javax.websocket:javax.websocket-api:1.1"
+//    compile "org.springframework:spring-websocket:4.3.14.RELEASE"
 
     // Camunda DMN
     compile "org.camunda.bpm.dmn:camunda-engine-dmn"

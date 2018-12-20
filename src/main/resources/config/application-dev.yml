@@ -120,13 +120,13 @@ jhipster:
                 url: http://localhost:8180/mancenter
     # CORS is disabled by default on microservices, as you should access them through a gateway.
     # If you want to enable it, please uncomment the configuration below.
-    # cors:
-        # allowed-origins: "*"
-        # allowed-methods: "*"
-        # allowed-headers: "*"
-        # exposed-headers: "Authorization,Link,X-Total-Count"
-        # allow-credentials: true
-        # max-age: 1800
+    cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+        allowed-headers: "*"
+        exposed-headers: "Authorization,Link,X-Total-Count"
+        allow-credentials: true
+        max-age: 5000
     security:
         authentication:
             jwt:
@@ -161,3 +161,14 @@ jhipster:
 # ===================================================================
 
 # application:
+# actuator :
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]
+  endpoint:
+    health:
+      show-details: always
+    activiti:
+      enabled: true

@@ -127,7 +127,8 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
         if (config.getAllowedOrigins() != null && !config.getAllowedOrigins().isEmpty()) {
             log.debug("Registering CORS filter");
             source.registerCorsConfiguration("/api/**", config);
-            source.registerCorsConfiguration("/management/**", config);
+//            source.registerCorsConfiguration("/management/**", config);
+            source.registerCorsConfiguration("/ssp/**", config);
             source.registerCorsConfiguration("/v2/api-docs", config);
         }
         return new CorsFilter(source);
