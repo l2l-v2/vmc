@@ -36,16 +36,16 @@ public class AnnotationIntegrationResultBuilder {
         return this;
     }
 
-    public IntegrationResult build() {
+    public AnnotationIntegrationResultImpl build() {
         return this.annotationIntegrationResult;
     }
 
-    public Message<IntegrationResult> buildMessage() {
+    public Message<AnnotationIntegrationResultImpl> buildMessage() {
         return this.getMessageBuilder().build();
     }
 
-    public MessageBuilder<IntegrationResult> getMessageBuilder() {
+    public MessageBuilder<AnnotationIntegrationResultImpl> getMessageBuilder() {
         // @bqzhu : cast 'this.integrationResult to IntegrationResult Type
-        return MessageBuilder.withPayload((IntegrationResult)this.annotationIntegrationResult).setHeader("targetService", this.requestEvent.getServiceFullName());
+        return MessageBuilder.withPayload((AnnotationIntegrationResultImpl)this.annotationIntegrationResult).setHeader("targetService", this.requestEvent.getServiceFullName());
     }
 }

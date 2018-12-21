@@ -2,12 +2,14 @@ package com.l2l.coordinator.vmc.connectors.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.l2l.coordinator.vmc.connectors.annotatoionDomain.AnnotationIntegrationRequestImpl;
+import com.l2l.coordinator.vmc.connectors.annotatoionDomain.AnnotationIntegrationResultImpl;
 import com.l2l.coordinator.vmc.connectors.channels.AnnotationMessageChannels;
 import com.l2l.coordinator.vmc.connectors.configuration.ConnectorProperties;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -38,10 +40,10 @@ public class AnnotationReceiverHandler {
         //  build and send result back
         Map<String, Object> results = new HashMap<>();
         results.put("rewards", "test");
-//        Message<IntegrationResult> message = AnnotationIntegrationResultBuilder.resultFor(event,
-//            connectorProperties)
-//            .withOutboundVariables(results)
-//            .buildMessage();
-//        integrationResultSender.send(message);
+        Message<AnnotationIntegrationResultImpl> message = AnnotationIntegrationResultBuilder.resultFor(event,
+            connectorProperties)
+            .withOutboundVariables(results)
+            .buildMessage();
+        integrationResultSender.send(message);
     }
 }

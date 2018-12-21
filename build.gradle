@@ -44,7 +44,7 @@ dependencyManagement {
     //jhipster-needle-gradle-dependency-management - JHipster will add additional dependencies management here
     mavenBom 'org.activiti.cloud.connector:activiti-cloud-connectors-dependencies:' + activiti_cloud_connector_dependencies_version
     mavenBom 'org.camunda.bpm.dmn:camunda-engine-dmn-bom:'+camunda_dmn_dependencies_version
-    mavenBom 'org.activiti.cloud:activiti-cloud-starter-runtime-bundle:'+ activiti_cloud_version
+//    mavenBom 'org.activiti.cloud:activiti-cloud-starter-runtime-bundle:'+ activiti_cloud_version
 
   }
 }
@@ -265,21 +265,21 @@ dependencies {
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
 
     // Minimum set of the activiti cloud connectors dependencies
-//    compile "org.activiti.api:activiti-api-processes-model"
-//    compile "org.activiti.cloud.api:activiti-cloud-api-processes-model"
-//    compile "org.activiti.cloud.api:activiti-cloud-api-processes-model-impl"
-//    compile "org.activiti:activiti-api-processes-model-impl"
+    compile "org.activiti.api:activiti-api-processes-model"
+    compile "org.activiti.cloud.api:activiti-cloud-api-processes-model"
+    compile "org.activiti.cloud.api:activiti-cloud-api-processes-model-impl"
+    compile "org.activiti:activiti-api-processes-model-impl"
 
     // Minimum set of the activiti cloud rb dependencies
-    compile "org.activiti.cloud:activiti-cloud-services-api"
-//    compile "org.activiti:activiti-engine"
-    compile "org.activiti:activiti-spring-boot-starter"
-    compile "org.activiti.cloud:activiti-cloud-services-events"
-    compile "org.activiti.cloud:activiti-cloud-services-rest-impl"
-    compile "org.activiti.cloud:activiti-cloud-services-connectors"
-    compile "org.activiti.cloud:activiti-cloud-services-subscriptions"
-    // extension of rb
-    compile "org.activiti.l2l:l2l-activiti-runtime-bundle-service:7.0.0.Beta1"
+//    compile "org.activiti.cloud:activiti-cloud-services-api"
+////    compile "org.activiti:activiti-engine"
+//    compile "org.activiti:activiti-spring-boot-starter"
+//    compile "org.activiti.cloud:activiti-cloud-services-events"
+//    compile "org.activiti.cloud:activiti-cloud-services-rest-impl"
+//    compile "org.activiti.cloud:activiti-cloud-services-connectors"
+//    compile "org.activiti.cloud:activiti-cloud-services-subscriptions"
+//    // extension of rb
+//    compile "org.activiti.l2l:l2l-activiti-runtime-bundle-service:7.0.0.Beta1"
     //websocket
     compile "org.springframework.boot:spring-boot-starter-websocket"
     compile "org.springframework.security:spring-security-messaging"
